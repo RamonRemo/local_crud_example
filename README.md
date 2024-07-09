@@ -1,14 +1,25 @@
-# kanban_re
+Sure, here's an improved version of the README:
 
-A kanban app made it in the simplest way possible.
+---
 
+# Simple Realm CRUD App
 
-- Singletons instead of DI
-- [Realm](https://www.mongodb.com/docs/atlas/device-sdks/sdk/flutter/quick-start/) for local persistance
-- uuid to generated unique id
+This is a simple app demonstrating the implementation of [Realm](https://pub.dev/packages/realm) for creating a local CRUD (Create, Read, Update, Delete) application with data persistence.
 
+## Features
 
+- **Create**: Add new entries to your local database.
+- **Read**: Retrieve and display data stored locally.
+- **Update**: Modify existing entries.
+- **Delete**: Remove entries from the database.
+- **Persistency**: All data is stored locally using Realm, ensuring it is retained across app sessions.
 
------- 
+## Realm Integration
 
-dart run realm generate
+This app uses the [Realm](https://pub.dev/packages/realm) package for local data storage. Realm is a fast, easy-to-use local database framework that allows for efficient data handling and persistence.
+
+### Key Benefits of Realm
+
+- **Speed**: Highly optimized for performance.
+- **Simplicity**: Easy to integrate and use within a Flutter app.
+- **Persistency**: Ensures data is retained between app sessions.
