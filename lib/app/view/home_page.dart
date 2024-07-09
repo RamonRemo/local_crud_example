@@ -16,14 +16,6 @@ class _HomePageState extends State<HomePage> {
   List<String> list = [];
   HomeController controller = HomeController();
 
-  void _addTask() {
-    print(controller.taskList);
-
-    controller.create(Task(Uuid.v1(), 'title', 0, subtitle: 'subtitle'));
-
-    setState(() {});
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,7 +46,7 @@ class _HomePageState extends State<HomePage> {
               children: [
                 IconButton(
                   onPressed: () {
-                    print('should edit');
+                    _editTask(index);
                   },
                   icon: const Icon(
                     Icons.edit_square,
@@ -62,9 +54,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 IconButton(
                   onPressed: () {
-                    setState(() {
-                      controller.delete(controller.taskList[index]);
-                    });
+                    _deleteTask(index);
                   },
                   icon: const Icon(
                     Icons.delete,
@@ -84,5 +74,34 @@ class _HomePageState extends State<HomePage> {
       tooltip: 'Increment',
       child: const Icon(Icons.add),
     );
+  }
+
+  void _addTask() {
+    setState(() {
+      controller.create(Task(Uuid.v1(), 'title', 0, subtitle: 'subtitle'));
+    });
+  }
+
+  void _deleteTask(index) {
+    setState(() {
+      controller.delete(controller.taskList[index]);
+    });
+  }
+
+  void _editTask(index) {
+    final oldTask = controller.taskList[index];
+
+    Task newTask = Task(
+      oldTask.id,
+      'new title',
+      oldTask.status,
+      subtitle: 'new subtitle',
+    );
+
+    print('teste');
+
+    setState(() {
+      controller.edit(newTask);
+    });
   }
 }

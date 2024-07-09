@@ -20,7 +20,11 @@ class TaskDatabase {
     });
   }
 
-  void edit(Task task) {}
+  void edit(Task task) {
+    realm.write(() {
+      realm.add(task, update: true);
+    });
+  }
 
   void delete(Task task) {
     realm.write(() {

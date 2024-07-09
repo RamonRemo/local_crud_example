@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kanban_re/app/model/entity/task.dart';
-import 'package:kanban_re/app/view/home.dart';
+import 'package:kanban_re/app/view/home_page.dart';
 import 'package:realm/realm.dart';
 
 void main() {
