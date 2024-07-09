@@ -1,7 +1,3 @@
-Sure, here's an improved version of the README:
-
----
-
 # Simple Realm CRUD App
 
 This is a simple app demonstrating the implementation of [Realm](https://pub.dev/packages/realm) for creating a local CRUD (Create, Read, Update, Delete) application with data persistence.
