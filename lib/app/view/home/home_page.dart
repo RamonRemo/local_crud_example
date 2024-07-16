@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:kanban_re/app/controller/home_controller.dart';
 import 'package:realm/realm.dart';
 
-import '../model/entity/task.dart';
+import '../../model/entity/task.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key, required this.title});
@@ -97,8 +97,6 @@ class _HomePageState extends State<HomePage> {
       oldTask.status,
       subtitle: 'new subtitle',
     );
-
-    print('teste');
 
     setState(() {
       controller.edit(newTask);
