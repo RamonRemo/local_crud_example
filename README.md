@@ -1,14 +1,12 @@
-# kanban_re
+# Base App
 
-A kanban app made it in the simplest way possible.
+This app functions as a template for developing other applications.
 
+## Features
 
-- Singletons instead of DI
-- [Realm](https://www.mongodb.com/docs/atlas/device-sdks/sdk/flutter/quick-start/) for local persistance
-- uuid to generated unique id
+- **Local CRUD with Realm:** Efficient local storage and data management using Realm.
+- **Localization:** Multilingual support for internationalization.
+- **Splash Screen:** A customizable splash screen used to load configurations.
+- **Named Routes:** Simplified navigation with named routes.
 
-
-
------- 
-
-dart run realm generate
+---
