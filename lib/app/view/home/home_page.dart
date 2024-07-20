@@ -27,6 +27,14 @@ class _HomePageState extends State<HomePage> {
   AppBar _appBar(BuildContext context) {
     return AppBar(
       backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+      actions: [
+        IconButton(
+          onPressed: () {
+            Navigator.of(context).pushNamed('/settings');
+          },
+          icon: const Icon(Icons.settings),
+        )
+      ],
       title: Text(widget.title),
     );
   }
